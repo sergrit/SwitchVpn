@@ -1,0 +1,165 @@
+DEFINE POPUP opera SHORTCUT RELATIVE FROM MROW(),MCOL()
+DEFINE BAR 1 OF opera PROMPT "EU - Europe"
+DEFINE BAR 2 OF opera PROMPT "AM - Americas"
+DEFINE BAR 3 OF opera PROMPT "AS - Asia"
+ON SELECTION BAR 1 OF opera RunOpera("EU")
+ON SELECTION BAR 2 OF opera RunOpera("AM")
+ON SELECTION BAR 3 OF opera RunOpera("AS")
+
+DEFINE POPUP other SHORTCUT RELATIVE FROM MROW(),MCOL()
+DEFINE BAR 1 OF other PROMPT "ar - Argentina"
+DEFINE BAR 2 OF other PROMPT "at - Austria"
+DEFINE BAR 3 OF other PROMPT "au - Australia"
+DEFINE BAR 4 OF other PROMPT "be - Belgium"
+DEFINE BAR 5 OF other PROMPT "bg - Bulgaria"
+DEFINE BAR 6 OF other PROMPT "br - Brazil"
+DEFINE BAR 7 OF other PROMPT "ca - Canada"
+DEFINE BAR 8 OF other PROMPT "ch - Switzerland"
+DEFINE BAR 9 OF other PROMPT "cl - Chile"
+DEFINE BAR 10 OF other PROMPT "co - Colombia"
+DEFINE BAR 11 OF other PROMPT "dk - Denmark"
+DEFINE BAR 12 OF other PROMPT "es - Spain"
+DEFINE BAR 13 OF other PROMPT "fi - Finland"
+DEFINE BAR 14 OF other PROMPT "gb - Great Britain"
+DEFINE BAR 15 OF other PROMPT "gr - Greece"
+DEFINE BAR 16 OF other PROMPT "hk - Hong Kong"
+DEFINE BAR 17 OF other PROMPT "hr - Croatia"
+DEFINE BAR 18 OF other PROMPT "hu - Hungary"
+DEFINE BAR 19 OF other PROMPT "id - Indonesia"
+DEFINE BAR 20 OF other PROMPT "ie - Ireland"
+DEFINE BAR 21 OF other PROMPT "il - Israel"
+DEFINE BAR 22 OF other PROMPT "in - India"
+DEFINE BAR 23 OF other PROMPT "is - Iceland"
+DEFINE BAR 24 OF other PROMPT "it - Italy"
+DEFINE BAR 25 OF other PROMPT "jp - Japan"
+DEFINE BAR 26 OF other PROMPT "kr - Korea"
+DEFINE BAR 27 OF other PROMPT "mx - Mexico"
+DEFINE BAR 28 OF other PROMPT "nl - Netherlands"
+DEFINE BAR 29 OF other PROMPT "no - Norway"
+DEFINE BAR 30 OF other PROMPT "nz - New Zealand"
+DEFINE BAR 31 OF other PROMPT "pl - Poland"
+DEFINE BAR 32 OF other PROMPT "ro - Romania"
+DEFINE BAR 33 OF other PROMPT "se - Sweden"
+DEFINE BAR 34 OF other PROMPT "sg - Singapore"
+DEFINE BAR 35 OF other PROMPT "sk - Slovakia"
+DEFINE BAR 36 OF other PROMPT "tr - Turkey"
+DEFINE BAR 37 OF other PROMPT "uk - United Kingdom"
+ON SELECTION BAR 1 OF other RunHola("ar")
+ON SELECTION BAR 2 OF other RunHola("at")
+ON SELECTION BAR 3 OF other RunHola("au")
+ON SELECTION BAR 4 OF other RunHola("be")
+ON SELECTION BAR 5 OF other RunHola("bg")
+ON SELECTION BAR 6 OF other RunHola("br")
+ON SELECTION BAR 7 OF other RunHola("ca")
+ON SELECTION BAR 8 OF other RunHola("ch")
+ON SELECTION BAR 9 OF other RunHola("cl")
+ON SELECTION BAR 10 OF other RunHola("co")
+ON SELECTION BAR 11 OF other RunHola("dk")
+ON SELECTION BAR 12 OF other RunHola("es")
+ON SELECTION BAR 13 OF other RunHola("fi")
+ON SELECTION BAR 14 OF other RunHola("gb")
+ON SELECTION BAR 15 OF other RunHola("gr")
+ON SELECTION BAR 16 OF other RunHola("hk")
+ON SELECTION BAR 17 OF other RunHola("hr")
+ON SELECTION BAR 18 OF other RunHola("hu")
+ON SELECTION BAR 19 OF other RunHola("id")
+ON SELECTION BAR 20 OF other RunHola("ie")
+ON SELECTION BAR 21 OF other RunHola("il")
+ON SELECTION BAR 22 OF other RunHola("in")
+ON SELECTION BAR 23 OF other RunHola("is")
+ON SELECTION BAR 24 OF other RunHola("it")
+ON SELECTION BAR 25 OF other RunHola("jp")
+ON SELECTION BAR 26 OF other RunHola("kr")
+ON SELECTION BAR 27 OF other RunHola("mx")
+ON SELECTION BAR 28 OF other RunHola("nl")
+ON SELECTION BAR 29 OF other RunHola("no")
+ON SELECTION BAR 30 OF other RunHola("nz")
+ON SELECTION BAR 31 OF other RunHola("pl")
+ON SELECTION BAR 32 OF other RunHola("ro")
+ON SELECTION BAR 33 OF other RunHola("se")
+ON SELECTION BAR 34 OF other RunHola("sg")
+ON SELECTION BAR 35 OF other RunHola("sk")
+ON SELECTION BAR 36 OF other RunHola("tr")
+ON SELECTION BAR 37 OF other RunHola("uk")
+
+DEFINE POPUP hola SHORTCUT RELATIVE FROM MROW(),MCOL()
+DEFINE BAR 1 OF hola PROMPT "us - USA"
+DEFINE BAR 2 OF hola PROMPT "fr - France"
+DEFINE BAR 3 OF hola PROMPT "de - Germany"
+DEFINE BAR 4 OF hola PROMPT "ru - Russian"
+DEFINE BAR 5 OF hola PROMPT "cz - Czech Republic"
+Define Bar 6 OF hola PROMPT "\-" COLOR SCHEME 4
+DEFINE BAR 7 OF hola PROMPT "Other Location..."
+ON BAR 7 OF hola ACTIVATE POPUP other
+ON SELECTION BAR 1 OF hola RunHola("us")
+ON SELECTION BAR 2 OF hola RunHola("fr")
+ON SELECTION BAR 3 OF hola RunHola("de")
+ON SELECTION BAR 4 OF hola RunHola("ru")
+ON SELECTION BAR 5 OF hola RunHola("cz")
+
+
+DEFINE POPUP winds SHORTCUT RELATIVE FROM MROW(),MCOL()
+DEFINE BAR 1 OF winds PROMPT "Best Location"
+Define Bar 2 OF winds PROMPT "\-" COLOR SCHEME 4
+DEFINE BAR 3 OF winds PROMPT "Canada East/Montreal"
+DEFINE BAR 4 OF winds PROMPT "Canada East/Toronto"
+DEFINE BAR 5 OF winds PROMPT "Canada West/Vancouver"
+DEFINE BAR 6 OF winds PROMPT "France/Paris"
+DEFINE BAR 7 OF winds PROMPT "Germany/Frankfurt"
+DEFINE BAR 8 OF winds PROMPT "Hong Kong/Hong Kong"
+DEFINE BAR 9 OF winds PROMPT "Netherlands/Amsterdam"
+DEFINE BAR 10 OF winds PROMPT "Norway/Oslo"
+DEFINE BAR 11 OF winds PROMPT "Romania/Bucharest"
+DEFINE BAR 12 OF winds PROMPT "Switzerland/Zurich"
+DEFINE BAR 13 OF winds PROMPT "Turkey/Istanbul"
+DEFINE BAR 14 OF winds PROMPT "US Central/Atlanta"
+DEFINE BAR 15 OF winds PROMPT "US Central/Dallas"
+DEFINE BAR 16 OF winds PROMPT "US East/Chicago"
+DEFINE BAR 17 OF winds PROMPT "US East/Miami"
+DEFINE BAR 18 OF winds PROMPT "US East/New York"
+DEFINE BAR 19 OF winds PROMPT "US East/Washington DC"
+DEFINE BAR 20 OF winds PROMPT "US West/Los Angeles"
+DEFINE BAR 21 OF winds PROMPT "US West/Seattle"
+DEFINE BAR 22 OF winds PROMPT "United Kingdom/London"
+ON SELECTION BAR 1 OF winds RunWinds("")
+ON SELECTION BAR 3 OF winds RunWinds("Canada East/Montreal")
+ON SELECTION BAR 4 OF winds RunWinds("Canada East/Toronto")
+ON SELECTION BAR 5 OF winds RunWinds("Canada West/Vancouver")
+ON SELECTION BAR 6 OF winds RunWinds("France/Paris")
+ON SELECTION BAR 7 OF winds RunWinds("Germany/Frankfurt")
+ON SELECTION BAR 8 OF winds RunWinds("Hong Kong/Hong Kong")
+ON SELECTION BAR 9 OF winds RunWinds("Netherlands/Amsterdam")
+ON SELECTION BAR 10 OF winds RunWinds("Norway/Oslo")
+ON SELECTION BAR 11 OF winds RunWinds("Romania/Bucharest")
+ON SELECTION BAR 12 OF winds RunWinds("Switzerland/Zurich")
+ON SELECTION BAR 13 OF winds RunWinds("Turkey/Istanbul")
+ON SELECTION BAR 14 OF winds RunWinds("US Central/Atlanta")
+ON SELECTION BAR 15 OF winds RunWinds("US Central/Dallas")
+ON SELECTION BAR 16 OF winds RunWinds("US East/Chicago")
+ON SELECTION BAR 17 OF winds RunWinds("US East/Miami")
+ON SELECTION BAR 18 OF winds RunWinds("US East/New York")
+ON SELECTION BAR 19 OF winds RunWinds("US East/Washington DC")
+ON SELECTION BAR 20 OF winds RunWinds("US West/Los Angeles")
+ON SELECTION BAR 21 OF winds RunWinds("US West/Seattle")
+ON SELECTION BAR 22 OF winds RunWinds("United Kingdom/London")
+
+DEFINE POPUP shortcut SHORTCUT RELATIVE FROM MROW(),MCOL()
+DEFINE BAR 1 OF shortcut PROMPT "Opera VPN"
+DEFINE BAR 2 OF shortcut PROMPT "Hola  VPN"
+DEFINE BAR 3 OF shortcut PROMPT "Windscribe VPN"
+DEFINE BAR 4 OF shortcut PROMPT "Dumbproxy"
+Define Bar 5 OF shortcut prompt "\-" COLOR SCHEME 4
+DEFINE BAR 6 OF shortcut PROMPT "Open Activity Log"
+DEFINE BAR 7 OF shortcut PROMPT "Settings"
+DEFINE BAR 8 OF shortcut PROMPT "About SwitchVPN"
+Define Bar 9 OF shortcut prompt "\-" COLOR SCHEME 4
+DEFINE BAR 10 OF shortcut PROMPT "Close SwitchVPN" picture "delete.ico"
+ON BAR 1 OF shortcut ACTIVATE POPUP opera
+ON BAR 2 OF shortcut ACTIVATE POPUP hola
+ON BAR 3 OF shortcut ACTIVATE POPUP winds
+ON SELECTION BAR 4 OF shortcut RunDumb()
+ON SELECTION BAR 6 OF shortcut StartActLog()
+ON SELECTION BAR 7 OF shortcut StartSet()
+ON SELECTION BAR 8 OF shortcut SAbout()
+ON SELECTION BAR 10 OF shortcut do exit
+ACTIVATE POPUP shortcut
