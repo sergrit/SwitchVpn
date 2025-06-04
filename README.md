@@ -27,3 +27,8 @@ VFPAR.DLL,
 VFPAT.DLL,
 wget.exe,
 windscribe-proxy.windows-amd64.exe.
+
+Version history:
+- in 1.2.0: Added Dumbproxy. A "Settings" menu has been added – you can set the binding address, additional command-line arguments, and choose which proxy to start on launch.
+- in 1.2.2: Stability improvements, Debug mode (proxy window remains visible).
+- in 1.2.3: Minor Bug Fix/
