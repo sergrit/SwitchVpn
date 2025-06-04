@@ -12,18 +12,18 @@ Download Wget and Add to program directory at a command-line utility for retriev
 https://eternallybored.org/misc/wget/
 
 Full List of required files to run SwitchVpn:
-delete.ico
-dumbproxy.windows-amd64.exe
-hola-proxy.windows-amd64.exe
-msvcr100.dll
-opera-proxy.windows-amd64.exe
-proxyvpn.DBF
-settings.DBF
-switchvpn64.exe
-SwitchVpn64.ico
-systray.mpr
-Systray.MPX
-VFPAR.DLL
-VFPAT.DLL
-wget.exe
-windscribe-proxy.windows-amd64.exe
+delete.ico,
+dumbproxy.windows-amd64.exe,
+hola-proxy.windows-amd64.exe,
+msvcr100.dll,
+opera-proxy.windows-amd64.exe,
+proxyvpn.DBF,
+settings.DBF,
+switchvpn64.exe,
+SwitchVpn64.ico,
+systray.mpr,
+Systray.MPX,
+VFPAR.DLL,
+VFPAT.DLL,
+wget.exe,
+windscribe-proxy.windows-amd64.exe.
