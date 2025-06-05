@@ -26,7 +26,7 @@ Full List of required files to run SwitchVpn:
 - VFPAR.DLL,
 - VFPAT.DLL,
 - wget.exe,
-windscribe-proxy.windows-amd64.exe.
+- windscribe-proxy.windows-amd64.exe.
 
 Version history:
 - in 1.2.0: Added Dumbproxy. A "Settings" menu has been added – you can set the binding address, additional command-line arguments, and choose which proxy to start on launch.
