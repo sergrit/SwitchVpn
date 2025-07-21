@@ -149,17 +149,22 @@ DEFINE BAR 2 OF shortcut PROMPT "Hola  VPN"
 DEFINE BAR 3 OF shortcut PROMPT "Windscribe VPN"
 DEFINE BAR 4 OF shortcut PROMPT "Dumbproxy"
 Define Bar 5 OF shortcut prompt "\-" COLOR SCHEME 4
-DEFINE BAR 6 OF shortcut PROMPT "Open Activity Log"
-DEFINE BAR 7 OF shortcut PROMPT "Settings"
-DEFINE BAR 8 OF shortcut PROMPT "About SwitchVPN"
-Define Bar 9 OF shortcut prompt "\-" COLOR SCHEME 4
-DEFINE BAR 10 OF shortcut PROMPT "Close SwitchVPN" picture "delete.ico"
+DEFINE BAR 6 OF shortcut PROMPT "Set as System"
+DEFINE BAR 7 OF shortcut PROMPT "Unset as System"
+Define Bar 8 OF shortcut prompt "\-" COLOR SCHEME 4
+DEFINE BAR 9 OF shortcut PROMPT "Open Activity Log"
+DEFINE BAR 10 OF shortcut PROMPT "Settings"
+DEFINE BAR 11 OF shortcut PROMPT "About SwitchVPN"
+Define Bar 12 OF shortcut prompt "\-" COLOR SCHEME 4
+DEFINE BAR 13 OF shortcut PROMPT "Close SwitchVPN" picture "delete.ico"
 ON BAR 1 OF shortcut ACTIVATE POPUP opera
 ON BAR 2 OF shortcut ACTIVATE POPUP hola
 ON BAR 3 OF shortcut ACTIVATE POPUP winds
 ON SELECTION BAR 4 OF shortcut RunDumb()
-ON SELECTION BAR 6 OF shortcut StartActLog()
-ON SELECTION BAR 7 OF shortcut StartSet()
-ON SELECTION BAR 8 OF shortcut SAbout()
-ON SELECTION BAR 10 OF shortcut do exit
+ON SELECTION BAR 6 OF shortcut Setsysproxy()
+ON SELECTION BAR 7 OF shortcut UNsetsysproxy()
+ON SELECTION BAR 9 OF shortcut StartActLog()
+ON SELECTION BAR 10 OF shortcut StartSet()
+ON SELECTION BAR 11 OF shortcut SAbout()
+ON SELECTION BAR 13 OF shortcut do exit
 ACTIVATE POPUP shortcut

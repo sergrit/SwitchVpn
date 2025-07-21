@@ -1,3 +1,6 @@
+If SetSystem="1"
+	UnSetsysproxy()
+EndIf	
 Try
 	Use in proxyvpn
 Catch

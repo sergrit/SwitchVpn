@@ -196,7 +196,11 @@ Procedure RunDumb
 		ClosedAll()
 		If !CoreDumb()
 			NotRsp([Dumbproxy ])
-		EndIf	
+		Else
+			If SetSystem="1"
+				Setsysproxy()
+			EndIf	
+		EndIf
 	EndIf
 	EndActLog()
 EndProc
@@ -217,11 +221,11 @@ Lparameters lcountry
 	StartRun()
 	WriteActLog([(+) Opera proxy is starting...])
 	If !CoreOpera(lcountry)
-*!*			WriteActLog([(+) Restart proxy Opera...])
-*!*			ClosedAll()
-*!*			If !CoreOpera(lcountry)
 			NotRsp([Opera proxy "]+lcountry+["])
-*!*			EndIf	
+	Else
+		If SetSystem="1"
+			Setsysproxy()
+		EndIf	
 	EndIf
 	EndActLog()
 EndProc
@@ -242,11 +246,11 @@ Lparameters lcountry
 	StartRun()
 	WriteActLog([(+) Hola proxy is starting...])
 	If !CoreHola(lcountry)
-*!*			WriteActLog([(+) Restart proxy Hola...])
-*!*			ClosedAll()
-*!*			If !CoreHola(lcountry)
 			NotRsp([Hola proxy "]+lcountry+["])
-*!*			EndIf	
+	Else
+		If SetSystem="1"
+			Setsysproxy()
+		EndIf	
 	EndIf
 	EndActLog()	
 EndProc
@@ -272,11 +276,11 @@ Lparameters lcountry
 		StartRun()
 		WriteActLog([(+) Windscribe proxy is starting...])
 		If !CoreWind(lcountry)
-*!*				WriteActLog([(+) Restart proxy Windscribe...])
-*!*				ClosedAll()
-*!*				If !CoreWind(lcountry)
 				NotRsp([Windscribe proxy "]+lcountry+["])
-*!*				EndIf	
+		Else
+			If SetSystem="1"
+				Setsysproxy()
+			EndIf	
 		EndIf
 		EndActLog()	
 	Else
@@ -301,7 +305,7 @@ Procedure SAbout
 		Agetfileversion("vermas",lfile)
 		lstr="Program @2022-2025 by Sergiy Grytsjuk"+Chr(13)+Chr(10)+;
 		"Version: "+Alltrim(vermas(4))+Chr(13)+Chr(10)+;
-		"Download at: https://www.dropbox.com/scl/fi/ib06ukmdqey2pzl2jejh0/SwitchVpnEXE.zip?rlkey=4h424xqtedtq5qbzoc40kac0w&st=grmflc0h&dl=1"+Chr(13)+Chr(10)+;
+		"Download at: https://github.com/sergrit/SwitchVpn/"+Chr(13)+Chr(10)+;
 		""+Chr(13)+Chr(10)+;
 		"Snawoot (Vladislav Yarmak) site: https://github.com/Snawoot"
 		Release vermas
@@ -342,6 +346,23 @@ Function FileSize
 	= FCLOSE(lnFileHandle)
 	Return lnFileSize 
 EndFunc
+Procedure Setsysproxy
+	StartActLog()
+	WriteActLog([(+) Set Bind Address as System...]+Chr(13)+Chr(10))
+	px.Run([cmd /c "powershell -command ""$reg = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings'; Set-ItemProperty -Path $reg -Name ProxyEnable -Value 1; Set-ItemProperty -Path $reg -Name ProxyServer -Value ']+Bindadd+['"""], 0, 1)
+	WriteActLog([(*) Done.])
+	Wait WINDOW "" timeout 1
+	EndActLog()
+EndProc
+Procedure UNsetsysproxy
+	StartActLog()
+	WriteActLog([(+) Unset Bind Address as System...]+Chr(13)+Chr(10))
+	px.Run([cmd /c "powershell -command ""$reg = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings'; Set-ItemProperty -Path $reg -Name ProxyEnable -Value 0; Remove-ItemProperty -Path $reg -Name ProxyServer -ErrorAction SilentlyContinue"""], 0, 1)
+	WriteActLog([(*) Done.])
+	Wait WINDOW "" timeout 1
+	EndActLog()
+EndProc
+
 
 *==============================================================================
 Procedure RunWget

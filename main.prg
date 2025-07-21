@@ -27,7 +27,7 @@ Else
 	px=CreateObject("wscript.shell")
 	ON ERRO do infoerro with erro(),prog(),line(1)
 	*
-	Public Bindadd,Runstart,ArgOpera,ArgHola,Argwind,Argdumb,DebugMode
+	Public Bindadd,Runstart,ArgOpera,ArgHola,Argwind,Argdumb,DebugMode,SetSystem
 	If !File("settings.dbf")
 		Create Table settings free (tset c(30),tvalue c(254))
 	Else	
@@ -49,6 +49,14 @@ Else
 		Replace tvalue with "127.0.0.1:18080"
 	EndIf
 	Bindadd=Alltrim(tvalue)	
+	
+	Locate for Alltrim(tset)=="set-system"
+	If !Found()
+		Append Blank
+		Replace tset with "set-system"
+		Replace tvalue with "0"
+	EndIf
+	SetSystem=Alltrim(tvalue)	
 	
 	Locate for Alltrim(tset)=="run-start"
 	If !Found()
@@ -107,6 +115,13 @@ Else
 		Case Lower(Alltrim(Runstart))=="d"
 			RunDumb()
 		Otherwise
+			If SetSystem="1"
+				StartRun()
+				Setsysproxy()
+				stray.TipText = [(+) Set Bind Address as System...]
+			Else
+				stray.TipText = [(+) Do Nothing...]
+			EndIf	
 	EndCase
 	Read events
 EndIf	
