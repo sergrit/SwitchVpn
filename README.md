@@ -25,8 +25,8 @@ Full List of required files to run SwitchVpn:
 - windscribe-proxy.windows-amd64.exe.
 
 Version history:
-in 1.2.0: Added Dumbproxy. A "Settings" menu has been added – you can set the binding address, additional command-line arguments, and choose which proxy to start on launch.
-in 1.2.2: Stability improvements, Debug mode (proxy window remains visible).
-in 1.2.3: Minor Bug Fix.
-in 1.2.4: Added the ability to set "Bind-Address" as the system proxy at startup, or manually via the menu. It is now possible to use switchvpn as a system proxy on/off switch.
-in 1.2.5: Added the ability to automatically determine the connection speed after it is installed, or manually via the menu (requires the speedtest.bat file).
+- in 1.2.0: Added Dumbproxy. A "Settings" menu has been added – you can set the binding address, additional command-line arguments, and choose which proxy to start on launch.
+- in 1.2.2: Stability improvements, Debug mode (proxy window remains visible).
+- in 1.2.3: Minor Bug Fix.
+- in 1.2.4: Added the ability to set "Bind-Address" as the system proxy at startup, or manually via the menu. It is now possible to use switchvpn as a system proxy on/off switch.
+- in 1.2.5: Added the ability to automatically determine the connection speed after it is installed, or manually via the menu (requires the speedtest.bat file).
