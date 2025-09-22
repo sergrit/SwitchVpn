@@ -200,6 +200,9 @@ Procedure RunDumb
 			If SetSystem="1"
 				Setsysproxy()
 			EndIf	
+			If SpeedTest="1"	
+				Speedtest()
+			EndIf	
 		EndIf
 	EndIf
 	EndActLog()
@@ -225,6 +228,9 @@ Lparameters lcountry
 	Else
 		If SetSystem="1"
 			Setsysproxy()
+		EndIf
+		If SpeedTest="1"	
+			Speedtest()
 		EndIf	
 	EndIf
 	EndActLog()
@@ -250,6 +256,9 @@ Lparameters lcountry
 	Else
 		If SetSystem="1"
 			Setsysproxy()
+		EndIf	
+		If SpeedTest="1"	
+			Speedtest()
 		EndIf	
 	EndIf
 	EndActLog()	
@@ -280,6 +289,9 @@ Lparameters lcountry
 		Else
 			If SetSystem="1"
 				Setsysproxy()
+			EndIf
+			If SpeedTest="1"	
+				Speedtest()
 			EndIf	
 		EndIf
 		EndActLog()	
@@ -362,8 +374,29 @@ Procedure UNsetsysproxy
 	Wait WINDOW "" timeout 1
 	EndActLog()
 EndProc
-
-
+Procedure SpeedTest
+	Lparameters lshowlog
+	lstbat=["]+k_drive+[speedtest.bat"]
+	If File(lstbat)
+		If Pcount()>0
+			StartActLog()
+		EndIf
+		WriteActLog("")
+		WriteActLog("(*) Speed testing...")
+		lstfile=["]+k_drive+[st.txt"]
+		If File(lstfile)
+	   		SafeDel(lstfile)
+		EndIf
+		px.Run([cmd /c "]+k_drive+["speedtest.bat ]+Bindadd+[ > st.txt],DebugMode,1)
+		If File(lstfile)
+			WriteActLog("(+) Connection speed: "+Chrtran(Chrtran(FILETOSTR(lstfile),Chr(13),""),Chr(10),""))
+	   		SafeDel(lstfile)
+		EndIf
+		If Pcount()>0
+			EndActLog()
+		EndIf
+	EndIf
+EndProc 	
 *==============================================================================
 Procedure RunWget
 	Lparameters ltproxy,ltcountry

@@ -27,7 +27,7 @@ Else
 	px=CreateObject("wscript.shell")
 	ON ERRO do infoerro with erro(),prog(),line(1)
 	*
-	Public Bindadd,Runstart,ArgOpera,ArgHola,Argwind,Argdumb,DebugMode,SetSystem
+	Public Bindadd,Runstart,ArgOpera,ArgHola,Argwind,Argdumb,DebugMode,SetSystem,SpeedTest
 	If !File("settings.dbf")
 		Create Table settings free (tset c(30),tvalue c(254))
 	Else	
@@ -57,6 +57,14 @@ Else
 		Replace tvalue with "0"
 	EndIf
 	SetSystem=Alltrim(tvalue)	
+
+	Locate for Alltrim(tset)=="speed-test"
+	If !Found()
+		Append Blank
+		Replace tset with "speed-test"
+		Replace tvalue with "0"
+	EndIf
+	SpeedTest=Alltrim(tvalue)	
 	
 	Locate for Alltrim(tset)=="run-start"
 	If !Found()
