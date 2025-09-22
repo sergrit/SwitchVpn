@@ -7,22 +7,22 @@ Download VPN proxies and Add to program directory at Snawoot (Vladislav Yarmak) 
 Download Wget and Add to program directory at a command-line utility for retrieving files using HTTP, HTTPS and FTP protocols site: https://eternallybored.org/misc/wget/
 
 Full List of required files to run SwitchVpn:
-delete.ico,
-dumbproxy.windows-amd64.exe,
-hola-proxy.windows-amd64.exe,
-msvcr100.dll,
-opera-proxy.windows-amd64.exe,
-proxyvpn.DBF,
-settings.DBF,
-speedtest.bat,
-switchvpn64.exe,
-SwitchVpn64.ico,
-systray.mpr,
-Systray.MPX,
-VFPAR.DLL,
-VFPAT.DLL,
-wget.exe,
-windscribe-proxy.windows-amd64.exe.
+- delete.ico,
+- dumbproxy.windows-amd64.exe,
+- hola-proxy.windows-amd64.exe,
+- msvcr100.dll,
+- opera-proxy.windows-amd64.exe,
+- proxyvpn.DBF,
+- settings.DBF,
+- speedtest.bat,
+- switchvpn64.exe,
+- SwitchVpn64.ico,
+- systray.mpr,
+- Systray.MPX,
+- VFPAR.DLL,
+- VFPAT.DLL,
+- wget.exe,
+- windscribe-proxy.windows-amd64.exe.
 
 Version history:
 in 1.2.0: Added Dumbproxy. A "Settings" menu has been added – you can set the binding address, additional command-line arguments, and choose which proxy to start on launch.
